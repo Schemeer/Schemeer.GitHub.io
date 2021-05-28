@@ -37,7 +37,7 @@
             xmlhttp=new XMLHttpRequest();
         else // for IE6, IE5
             xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
-        xmlhttp.open("GET","test.json",true);
+        xmlhttp.open("GET","test.md",true);
         xmlhttp.send(null);
         xmlhttp.onload = function(){
             console.log(xmlhttp.responseText);
