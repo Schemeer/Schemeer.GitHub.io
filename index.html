@@ -4,7 +4,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script type="text/javascript" src="showdown.min.js"></script>
-    <title>Document</title>
+    <title>Schemer</title>
 </head>
 <style>
     body {
@@ -41,10 +41,11 @@
         xmlhttp.send(null);
         xmlhttp.onload = function(){
             console.log(xmlhttp.responseText);
+            var converter = new showdown.Converter();
+            var html = converter.makeHtml(xmlhttp.responseText);
+            document.getElementById("result").innerHTML = html;
         }
-        var converter = new showdown.Converter();
-        var html = converter.makeHtml(text);
-        document.getElementById("result").innerHTML = html;
+        
     </script>
 </body>
 </html>
