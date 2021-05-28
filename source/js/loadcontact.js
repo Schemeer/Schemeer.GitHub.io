@@ -9,5 +9,9 @@ contact.onload = function(){
     console.log(contact.responseText);
     var converter = new showdown.Converter();
     var html = converter.makeHtml(contact.responseText);
-    document.getElementById("contact").innerHTML = html;
+    var elements = document.getElementsByClassName("contact");
+    console.log(elements)
+    for(i=0; i < elements.length; i++) {
+        elements[i].innerHTML = html;
+    }
 }
