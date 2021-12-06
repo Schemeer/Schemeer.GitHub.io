@@ -1,6 +1,4 @@
-### Contact
-
-- **Schemeer**
+---
 
 - SJTU
 - **Phone**: 54749110	
